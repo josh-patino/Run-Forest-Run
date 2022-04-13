@@ -4,55 +4,49 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    //public GameObject enemyPrefab;
-    public GameObject powerupPrefab;
-    private float spawnRange = 9;
+    public GameObject[] prefabsToSpawn;
+    private float leftBound = -6.5f; 
+    private float rightBound = 6.5f; 
+    private float spawnPosZ = 79.0f; 
+    private PlayerController playerControllerScript; 
 
-    //public int enemyCount;
-
-    public int waveNumber = 1;
 
     // Start is called before the first frame update
     void Start()
     {
-        //SpawnEnemyWave(waveNumber);
-        SpawnPowerUp(1);
+        playerControllerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>(); 
+        StartCoroutine(SpawnRandomPrefabWtihCoroutine()); 
     }
-
-    //private void SpawnEnemyWave(int enemiesToSpawn)
-    //{
-    //    for (int i = 0; i < enemiesToSpawn; i++)
-    //    {
-    //        Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
-    //    }
-    //}
-
-    private void SpawnPowerUp(int powerupsToSpawn)
+    IEnumerator SpawnRandomPrefabWtihCoroutine()
     {
-        for (int i = 0; i < powerupsToSpawn; i++)
+        //add a 3 second delay before first spawning object
+        yield return new WaitForSeconds(3f);
+        while (!playerControllerScript.gameOver)
         {
-            Instantiate(powerupPrefab, GenerateSpawnPosition(), powerupPrefab.transform.rotation);
-        }
-    }
+            SpawnRandomPreFab();
 
-    private Vector3 GenerateSpawnPosition()
-    {
-        float spawnPosX = Random.Range(-spawnRange, spawnRange);
-        float spawnPosZ = Random.Range(-spawnRange, spawnRange);
-        Vector3 randomPos = new Vector3(spawnPosX, 0, spawnPosZ);
-        return randomPos;
+            float randomDelay = Random.Range(0.8f, 2.0f); 
+
+            yield return new WaitForSeconds(randomDelay);
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        
+    }
 
-        //if (enemyCount == 0)
-        //{
-        //    waveNumber++;
-        //    SpawnEnemyWave(waveNumber);
-        //    SpawnPowerUp(1);
-        //}
+    void SpawnRandomPreFab()
+    {
+        //pick a random car
+            int prefabIndex = Random.Range(0,prefabsToSpawn.Length);
+
+            // generate random spawn position
+            Vector3 spawnPos = new Vector3(spawnPosZ, 0, Random.Range(leftBound,rightBound));
+
+            // random animal to spawn
+            Instantiate(prefabsToSpawn[prefabIndex], spawnPos, prefabsToSpawn[prefabIndex].transform.rotation);
     }
 }
