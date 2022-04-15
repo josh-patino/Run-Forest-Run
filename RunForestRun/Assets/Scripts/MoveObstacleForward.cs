@@ -6,7 +6,7 @@ public class MoveObstacleForward : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed = 30f;
-    private float leftBound = -20;
+    private float leftBound = -30;
     private PlayerController playerControllerScript; 
     // Start is called before the first frame update
     void Start()
