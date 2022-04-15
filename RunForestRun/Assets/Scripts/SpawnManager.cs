@@ -7,8 +7,10 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] prefabsToSpawn;
     private float leftBound = -6.5f; 
     private float rightBound = 6.5f; 
-    private float spawnPosZ = 79.0f; 
+    private float spawnPosZ = 210.0f; 
     private PlayerController playerControllerScript; 
+    public float minRangeInSec = 0.3f; 
+    public float maxRangeInSec = 0.8f; 
 
 
     // Start is called before the first frame update
@@ -25,7 +27,7 @@ public class SpawnManager : MonoBehaviour
         {
             SpawnRandomPreFab();
 
-            float randomDelay = Random.Range(0.8f, 2.0f); 
+            float randomDelay = Random.Range(minRangeInSec, maxRangeInSec); 
 
             yield return new WaitForSeconds(randomDelay);
         }
@@ -48,5 +50,6 @@ public class SpawnManager : MonoBehaviour
 
             // random animal to spawn
             Instantiate(prefabsToSpawn[prefabIndex], spawnPos, prefabsToSpawn[prefabIndex].transform.rotation);
+            
     }
 }
