@@ -30,7 +30,7 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        instructionsText.text = "Avoid all traffic! collect healthy foods \n to increase protien! move L or R \n Press Space to continue!"; 
+        instructionsText.text = "Avoid all traffic! collect healthy foods \n to increase protein! move L or R \n Press Space to continue!"; 
 
         if (Input.GetKey(KeyCode.Space))
         {

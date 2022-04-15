@@ -11,8 +11,9 @@ public class PlayerController : MonoBehaviour
     public bool gameOver = false; 
     public float gravityModifier; 
     public float horizontalInput; 
-     public float speed; 
-    public float zRange = 6.5f; 
+    public float speed; 
+    public float zRange = 6.5f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -73,5 +74,26 @@ public class PlayerController : MonoBehaviour
 
        }
     }
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("HealthyFood"))
+        {
+            //logic for healthy food
+
+            /* Increase calorie bar slightly
+             * 
+             */
+
+        }
+        if (other.CompareTag("UnhealthyFood"))
+        {
+            //logic for unhealthy food
+
+            /* increase calorie bar drastically
+             * 
+             */
+        }
+    }
+
 }
