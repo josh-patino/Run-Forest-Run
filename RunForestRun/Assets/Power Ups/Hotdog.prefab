@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8246132441623207793}
   - component: {fileID: 8246132441624337841}
   - component: {fileID: 8246132442659973132}
-  - component: {fileID: 8246132442659973133}
+  - component: {fileID: 1167086508794098685}
   m_Layer: 0
   m_Name: Hotdog
   m_TagString: UnhealthyFood
@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8246132441626264433}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
   m_LocalPosition: {x: -5.0747275, y: 0.00000017881393, z: 3.827345}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!33 &8246132441623207793
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.50468737, y: 0.14646213, z: 0.21018218}
   m_Center: {x: 1.0587912e-22, y: 0.073231064, z: -0.000000007450582}
---- !u!114 &8246132442659973133
+--- !u!114 &1167086508794098685
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8246132441626264433}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ffed9248bf3f4c80bb074a34b1b14f0, type: 3}
+  m_Script: {fileID: 11500000, guid: b5cea2f8eaa0146039eefdad2b34d604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30

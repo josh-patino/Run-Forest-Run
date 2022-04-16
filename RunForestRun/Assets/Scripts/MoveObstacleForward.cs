@@ -27,5 +27,15 @@ public class MoveObstacleForward : MonoBehaviour
             Destroy(gameObject); 
         }
 
+        if (transform.position.x < leftBound && gameObject.CompareTag("HealthyFood"))
+        {
+            Destroy(gameObject);
+        }
+
+        if (transform.position.x < leftBound && gameObject.CompareTag("UnhealthyFood"))
+        {
+            Destroy(gameObject);
+        }
+
     }
 }

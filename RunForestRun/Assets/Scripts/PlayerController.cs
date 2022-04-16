@@ -84,6 +84,7 @@ public class PlayerController : MonoBehaviour
             /* Increase calorie bar slightly
              * 
              */
+            Destroy(other.gameObject);
 
         }
         if (other.CompareTag("UnhealthyFood"))
@@ -93,6 +94,7 @@ public class PlayerController : MonoBehaviour
             /* increase calorie bar drastically
              * 
              */
+            Destroy(other.gameObject);
         }
     }
 

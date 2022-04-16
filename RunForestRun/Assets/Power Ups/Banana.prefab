@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4031643773962257827}
   - component: {fileID: 4031643773963257699}
   - component: {fileID: 4031643773961101061}
-  - component: {fileID: 4031643773961101062}
+  - component: {fileID: -7842244459449346819}
   m_Layer: 0
   m_Name: Banana
   m_TagString: HealthyFood
@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4031643773961001379}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 11.57, y: 0.16, z: -0.37}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &4031643773962257827
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.14685261, y: 0.49218088, z: 0.38954604}
   m_Center: {x: 0, y: 0.24609041, z: 0}
---- !u!114 &4031643773961101062
+--- !u!114 &-7842244459449346819
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4031643773961001379}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ffed9248bf3f4c80bb074a34b1b14f0, type: 3}
+  m_Script: {fileID: 11500000, guid: b5cea2f8eaa0146039eefdad2b34d604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
