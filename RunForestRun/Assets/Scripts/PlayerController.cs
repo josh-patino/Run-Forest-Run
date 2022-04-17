@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public float horizontalInput; 
     public float speed; 
     public float zRange = 6.5f;
+    public CalorieBar cb;
     
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,8 @@ public class PlayerController : MonoBehaviour
         {
         Physics.gravity *= gravityModifier; 
         }
+
+        cb = GameObject.FindGameObjectWithTag("CalorieBar").GetComponent<CalorieBar>();
     }
     
 
@@ -79,21 +82,13 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("HealthyFood"))
         {
-            //logic for healthy food
-
-            /* Increase calorie bar slightly
-             * 
-             */
+            cb.calories += 90;
             Destroy(other.gameObject);
 
         }
         if (other.CompareTag("UnhealthyFood"))
         {
-            //logic for unhealthy food
-
-            /* increase calorie bar drastically
-             * 
-             */
+            cb.calories += 200;
             Destroy(other.gameObject);
         }
     }
