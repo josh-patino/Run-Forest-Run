@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Obstacle
   - Ground
+  - PowerUp
+  - HealthyFood
+  - UnhealthyFood
   layers:
   - Default
   - TransparentFX
