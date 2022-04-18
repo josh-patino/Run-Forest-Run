@@ -22,6 +22,12 @@ public class PlayerController : MonoBehaviour
     private UIManager displayScoreScript; 
     
     // Start is called before the first frame update
+
+    void Awake()
+    {
+        displayScoreScript = GameObject.FindGameObjectWithTag("DisplayScoreText").GetComponent<UIManager>();
+
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody>(); 
@@ -31,7 +37,7 @@ public class PlayerController : MonoBehaviour
         {
         Physics.gravity *= gravityModifier; 
         }
-        displayScoreScript = GameObject.FindGameObjectWithTag("DisplayScoreText").GetComponent<UIManager>();
+        //displayScoreScript = GameObject.FindGameObjectWithTag("DisplayScoreText").GetComponent<UIManager>();
         //cb = GameObject.FindGameObjectWithTag("CalorieBar").GetComponent<CalorieBar>();
     }
     

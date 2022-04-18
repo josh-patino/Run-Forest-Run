@@ -322,7 +322,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Avoid all traffic and don't go over 2000 calories! move L or R\n One Day
+    Lil' Gumpy started running... \n Press Space to continue and jump!
 --- !u!222 &849833734
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -501,8 +502,8 @@ MonoBehaviour:
   - {fileID: 1646981259178978, guid: 2dc42346e5313b34c93d598a61994629, type: 3}
   - {fileID: 1646981259178978, guid: 0ae65270c30153049ab49eb3ebf070d6, type: 3}
   - {fileID: 1646981259178978, guid: f463242ba59e68243b7a693d4f0cfc18, type: 3}
-  minRangeInSec: 0.5
-  maxRangeInSec: 1.2
+  minRangeInSec: 0.2
+  maxRangeInSec: 1
   foodPrefabs:
   - {fileID: 4031643773961001379, guid: a3e1f9e365980b04aabc4f0362a1ba90, type: 3}
   - {fileID: 8800796910019168564, guid: c1d99ece070b20543a90b41b8a20734d, type: 3}

@@ -18,20 +18,27 @@ public class UIManager : MonoBehaviour
     private PlayerController playerControllerScript; 
     public bool won = false; 
    
-    // Start is called before the first frame update
+   
+
+    void Awake()
+    {
+        calText.gameObject.SetActive(false);
+
+        calText.gameObject.SetActive(true);
+    }
     void Start()
     {
-        //if (calText == null)
-        //{
-           // calText = FindObjectOfType<Text>();
-        //}
+        if (calText == null)
+        {
+            calText = FindObjectOfType<Text>();
+        }
 
         if (playerControllerScript == null)
         {
             playerControllerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>(); 
         }
 
-        calText.text = " "; 
+        calText.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
