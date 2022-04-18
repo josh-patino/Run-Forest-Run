@@ -9,6 +9,7 @@ TagManager:
   - PowerUp
   - HealthyFood
   - UnhealthyFood
+  - DisplayScoreText
   layers:
   - Default
   - TransparentFX

@@ -13,7 +13,8 @@ public class PlayerController : MonoBehaviour
     public float horizontalInput; 
     public float speed; 
     public float zRange = 6.5f;
-    public CalorieBar cb;
+    //public CalorieBar cb;
+    private UIManager displayScoreScript; 
     
     // Start is called before the first frame update
     void Start()
@@ -25,8 +26,8 @@ public class PlayerController : MonoBehaviour
         {
         Physics.gravity *= gravityModifier; 
         }
-
-        cb = GameObject.FindGameObjectWithTag("CalorieBar").GetComponent<CalorieBar>();
+        displayScoreScript = GameObject.FindGameObjectWithTag("DisplayScoreText").GetComponent<UIManager>();
+        //cb = GameObject.FindGameObjectWithTag("CalorieBar").GetComponent<CalorieBar>();
     }
     
 
@@ -82,13 +83,13 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("HealthyFood"))
         {
-            cb.calories += 90;
+            displayScoreScript.cal += 90; 
             Destroy(other.gameObject);
 
         }
         if (other.CompareTag("UnhealthyFood"))
         {
-            cb.calories += 200;
+            displayScoreScript.cal += 200;
             Destroy(other.gameObject);
         }
     }

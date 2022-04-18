@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CalorieBar : MonoBehaviour
 {
-    public int calories = 2500;
+  
 
     // Start is called before the first frame update
     void Start()

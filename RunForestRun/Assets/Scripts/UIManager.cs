@@ -6,25 +6,27 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    public int cal = 1;
-    public Text calText; 
+    public int cal = 0;
+    //public Text calories; 
     public Text instructionsText; 
+    public Text calText; 
     private PlayerController playerControllerScript; 
     public bool won = false; 
+   
     // Start is called before the first frame update
     void Start()
     {
-        if (calText == null)
-        {
-            calText = FindObjectOfType<Text>();
-        }
+        //if (calText == null)
+        //{
+           // calText = FindObjectOfType<Text>();
+        //}
 
         if (playerControllerScript == null)
         {
             playerControllerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>(); 
         }
 
-        calText.text = "wave: 0"; 
+        calText.text = " "; 
     }
 
     // Update is called once per frame
@@ -40,7 +42,7 @@ public class UIManager : MonoBehaviour
         //display calories during the game
         if (!playerControllerScript.gameOver)
         {
-            calText.text = "cal  " + cal;
+            calText.text = "Calories: " + cal;
         }
         if (playerControllerScript.gameOver && !won)
         {
@@ -48,7 +50,7 @@ public class UIManager : MonoBehaviour
             instructionsText.text = "You Lose!" + "\n" + "Press R to Try again!";   
         }
         // win condition: 10
-        if (cal >= 10)
+        if (cal >= 2000)
         {
             playerControllerScript.gameOver = true; 
             won = true; 
