@@ -1,3 +1,8 @@
+/*
+* GRoup 1
+* Project 4
+* manages the player script
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
