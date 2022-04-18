@@ -1,4 +1,9 @@
-﻿using System.Collections;
+/*
+* GRoup 1
+* Project 4
+* moves obstacles forward
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
