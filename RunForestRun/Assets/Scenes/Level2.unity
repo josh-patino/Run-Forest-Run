@@ -559,7 +559,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: text
+  m_Text: Lil Gumpy is diabetic and worries about his health.
 --- !u!114 &360243513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,7 +627,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Lil Gumpy runs to keep his blood sugar in check. He knows he can't eat
+    too much.
 --- !u!222 &752362893
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -39,7 +39,7 @@ public class UIManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex == 0 )
         {
-            instructionsText.text = "Avoid all traffic! collect healthy foods \n to increase protein! move L or R \n Press Space to continue!"; 
+            instructionsText.text = "Avoid all traffic and don't go over 2000 calories! move L or R\n One Day Lil' Gumpy started running... \n Press Space to continue and jump!"; 
         }
         
 
