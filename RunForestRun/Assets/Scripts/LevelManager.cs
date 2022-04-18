@@ -21,20 +21,24 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (playerControllerScript == null)
+        {
+            playerControllerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        }
         //grab current scene
         nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
         //start time of level
         time = Time.time;
         //changes how long each stage lasts adding time each new stage
-        timeLeft = (SceneManager.GetActiveScene().buildIndex + 1) * 40f;
+        timeLeft = (SceneManager.GetActiveScene().buildIndex + 1) * 20f;
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if ((Time.time >= time + timeLeft) /*&& (playerControllerScript.gameOver != true)*/)
+        if ((Time.time >= time + timeLeft) && (playerControllerScript.gameOver != true))
         {
             if (SceneManager.sceneCountInBuildSettings > nextSceneIndex)
             {

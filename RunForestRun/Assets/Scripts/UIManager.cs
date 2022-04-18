@@ -62,6 +62,11 @@ public class UIManager : MonoBehaviour
         if (playerControllerScript.gameOver && Input.GetKeyDown(KeyCode.R))
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+
+            
         }
+
+      
+
     }
 }
