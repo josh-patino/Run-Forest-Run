@@ -489,6 +489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 360243510}
+  - component: {fileID: 360243513}
   - component: {fileID: 360243511}
   - component: {fileID: 360243512}
   m_Layer: 5
@@ -559,6 +560,22 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: text
+--- !u!114 &360243513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360243509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3a53d41ea4041fd9b88886284c4e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cal: 0
+  instructionsText: {fileID: 752362892}
+  calText: {fileID: 360243512}
+  won: 0
 --- !u!1 &752362891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,8 +1439,8 @@ MonoBehaviour:
   - {fileID: 1646981259178978, guid: 2dc42346e5313b34c93d598a61994629, type: 3}
   - {fileID: 1646981259178978, guid: 0ae65270c30153049ab49eb3ebf070d6, type: 3}
   - {fileID: 1646981259178978, guid: f463242ba59e68243b7a693d4f0cfc18, type: 3}
-  minRangeInSec: 0.1
-  maxRangeInSec: 0.3
+  minRangeInSec: 0.4
+  maxRangeInSec: 1.1
   foodPrefabs:
   - {fileID: 4031643773961001379, guid: a3e1f9e365980b04aabc4f0362a1ba90, type: 3}
   - {fileID: 8800796910019168564, guid: c1d99ece070b20543a90b41b8a20734d, type: 3}

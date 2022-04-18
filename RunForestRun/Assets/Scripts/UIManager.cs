@@ -32,7 +32,11 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        instructionsText.text = "Avoid all traffic! collect healthy foods \n to increase protein! move L or R \n Press Space to continue!"; 
+        if (SceneManager.GetActiveScene().buildIndex == 0 )
+        {
+            instructionsText.text = "Avoid all traffic! collect healthy foods \n to increase protein! move L or R \n Press Space to continue!"; 
+        }
+        
 
         if (Input.GetKey(KeyCode.Space))
         {
@@ -56,7 +60,7 @@ public class UIManager : MonoBehaviour
             won = true; 
 
            
-            instructionsText.text = "You win!" + "\n" + "Press R to Try again!"; 
+            instructionsText.text = "You died of diabetes!" + "\n" + "Press R to Try again!"; 
         }
 
         if (playerControllerScript.gameOver && Input.GetKeyDown(KeyCode.R))

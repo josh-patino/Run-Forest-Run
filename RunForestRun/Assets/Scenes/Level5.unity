@@ -1108,7 +1108,7 @@ MonoBehaviour:
   - {fileID: 1646981259178978, guid: 0ae65270c30153049ab49eb3ebf070d6, type: 3}
   - {fileID: 1646981259178978, guid: f463242ba59e68243b7a693d4f0cfc18, type: 3}
   minRangeInSec: 0.1
-  maxRangeInSec: 0.3
+  maxRangeInSec: 0.4
   foodPrefabs:
   - {fileID: 4031643773961001379, guid: a3e1f9e365980b04aabc4f0362a1ba90, type: 3}
   - {fileID: 8800796910019168564, guid: c1d99ece070b20543a90b41b8a20734d, type: 3}
@@ -1232,6 +1232,7 @@ GameObject:
   - component: {fileID: 1731609407}
   - component: {fileID: 1731609406}
   - component: {fileID: 1731609405}
+  - component: {fileID: 1731609408}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1320,6 +1321,22 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1731609408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731609403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3a53d41ea4041fd9b88886284c4e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cal: 0
+  instructionsText: {fileID: 961586425}
+  calText: {fileID: 405273484}
+  won: 0
 --- !u!1 &1844674544
 GameObject:
   m_ObjectHideFlags: 0
