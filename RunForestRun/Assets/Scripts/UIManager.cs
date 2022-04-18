@@ -1,4 +1,9 @@
-﻿using System.Collections;
+/*
+* GRoup 1
+* Project 4
+* manages the UI, displays the instructions, story, and the score
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; 
