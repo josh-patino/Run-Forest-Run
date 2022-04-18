@@ -1,4 +1,9 @@
-﻿using System.Collections;
+/*
+* GRoup 1
+* Project 4
+* repeatrs the backgorund
+*/﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
