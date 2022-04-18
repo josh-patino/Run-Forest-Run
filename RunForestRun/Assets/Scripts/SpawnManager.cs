@@ -1,4 +1,9 @@
-﻿using System.Collections;
+/*
+* GRoup 1
+* Project 4
+* manages the car and food spawns
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
