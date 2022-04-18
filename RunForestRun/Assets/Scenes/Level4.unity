@@ -491,6 +491,7 @@ GameObject:
   - component: {fileID: 765947131}
   - component: {fileID: 765947132}
   - component: {fileID: 765947133}
+  - component: {fileID: 765947134}
   m_Layer: 5
   m_Name: Text
   m_TagString: DisplayScoreText
@@ -559,6 +560,22 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: text
+--- !u!114 &765947134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765947130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3a53d41ea4041fd9b88886284c4e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cal: 0
+  instructionsText: {fileID: 1277461150}
+  calText: {fileID: 765947133}
+  won: 0
 --- !u!1 &784001643
 GameObject:
   m_ObjectHideFlags: 0
