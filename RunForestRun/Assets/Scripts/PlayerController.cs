@@ -94,7 +94,11 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("HealthyFood"))
         {
-            displayScoreScript.cal += 90; 
+            displayScoreScript.cal -= 130;
+            if (displayScoreScript.cal < 0)
+            {
+                displayScoreScript.cal = 0;
+            }
             Destroy(other.gameObject);
 
         }
