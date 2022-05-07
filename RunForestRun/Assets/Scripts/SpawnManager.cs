@@ -1,4 +1,9 @@
-﻿using System.Collections;
+/*
+* GRoup 1
+* Project 4
+* manages the car and food spawns
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +16,8 @@ public class SpawnManager : MonoBehaviour
     private PlayerController playerControllerScript; 
     public float minRangeInSec = 0.3f; 
     public float maxRangeInSec = 0.8f; 
+    
+    public GameObject[] foodPrefabs; 
 
 
     // Start is called before the first frame update
@@ -44,12 +51,17 @@ public class SpawnManager : MonoBehaviour
     {
         //pick a random car
             int prefabIndex = Random.Range(0,prefabsToSpawn.Length);
+            int prefabFoodIndex = Random.Range(0,foodPrefabs.Length);
 
             // generate random spawn position
             Vector3 spawnPos = new Vector3(spawnPosZ, 0, Random.Range(leftBound,rightBound));
+            Vector3 spawnPosFood = new Vector3(spawnPosZ, 0, Random.Range(leftBound,rightBound));
 
             // random animal to spawn
             Instantiate(prefabsToSpawn[prefabIndex], spawnPos, prefabsToSpawn[prefabIndex].transform.rotation);
+            Instantiate(foodPrefabs[prefabFoodIndex], spawnPosFood, foodPrefabs[prefabFoodIndex].transform.rotation);
             
     }
+
+    
 }

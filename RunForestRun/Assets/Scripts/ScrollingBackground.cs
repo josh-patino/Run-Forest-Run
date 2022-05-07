@@ -1,4 +1,9 @@
-﻿using System.Collections;
+/*
+* GRoup 1
+* Project 4
+* responsible for the logic to make the background scroll
+*/﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

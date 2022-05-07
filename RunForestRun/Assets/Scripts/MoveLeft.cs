@@ -1,4 +1,9 @@
-﻿using System.Collections;
+/*
+* GRoup 1
+* Project 4
+* moves prefabs and the background to the left
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

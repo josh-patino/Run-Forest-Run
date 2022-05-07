@@ -1,10 +1,15 @@
-﻿using System.Collections;
+/*
+* GRoup 1
+* Project 4
+* displays the calorie bar
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CalorieBar : MonoBehaviour
 {
-    public int calories = 2500;
+  
 
     // Start is called before the first frame update
     void Start()
