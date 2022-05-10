@@ -9,6 +9,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private AudioSource playerAudio; 
+    public AudioClip jump; 
+    public AudioClip crashing; 
+    public AudioClip eating; 
     private Rigidbody rb; 
     public float jumpForce;
     public bool isOnGround = true; 
@@ -30,6 +34,7 @@ public class PlayerController : MonoBehaviour
     }
     void Start()
     {
+        playerAudio = GetComponent<AudioSource>(); 
         rb = GetComponent<Rigidbody>(); 
         forceMode = ForceMode.Impulse;
 
@@ -65,6 +70,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameOver)
         {
+            playerAudio.PlayOneShot(jump, 0.5F);
             rb.AddForce(Vector3.up * jumpForce,forceMode); 
             isOnGround = false; 
         }
@@ -80,12 +86,11 @@ public class PlayerController : MonoBehaviour
        } 
        else if (collision.gameObject.CompareTag("Obstacle") && !gameOver)
        {
-           //playerAnimator.SetBool("Death_b", true);
-           //playerAnimator.SetInteger("DeathType_int", 1);  
+           
            Debug.Log("Game is over!");
            gameOver = true; 
-           //playerAudio.PlayOneShot(crashSound, 1.0f); 
-           //explosionParticle.Play();
+           playerAudio.PlayOneShot(crashing, 1.0f); 
+           
 
        }
     }
@@ -96,12 +101,14 @@ public class PlayerController : MonoBehaviour
         {
             displayScoreScript.cal += 90; 
             Destroy(other.gameObject);
+            playerAudio.PlayOneShot(eating, 1.0f);
 
         }
         if (other.CompareTag("UnhealthyFood"))
         {
             displayScoreScript.cal += 200;
             Destroy(other.gameObject);
+            playerAudio.PlayOneShot(eating, 2.0f);
         }
     }
 

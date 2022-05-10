@@ -410,6 +410,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 804686629689304628, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
+      propertyPath: m_Volume
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 1949467747158480874, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
       propertyPath: speed
       value: 10
@@ -430,6 +434,10 @@ PrefabInstance:
       propertyPath: forceMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1949467747158480874, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
+      propertyPath: eating
+      value: 
+      objectReference: {fileID: 8300000, guid: fddc76a4766224f1fa2aeffbaedbc6b6, type: 3}
     m_RemovedComponents:
     - {fileID: 4649715570801606812, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
@@ -825,6 +833,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6656a56b4f754987b1afa243bc1e90c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jump: {fileID: 0}
+  crashing: {fileID: 0}
+  eating: {fileID: 0}
   jumpForce: 0
   isOnGround: 1
   forceMode: 0
