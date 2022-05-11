@@ -41,9 +41,12 @@ public class UIManager : MonoBehaviour {
         } else if ( cal >= 2000) {
             playerControllerScript.gameOver = true;
             instructionsText.text = "You died of diabetes!" + "\n" + "Press R to Try again!";
+            calText.text = "Calories: 2000";
+        } else if (playerControllerScript.gameOver) {
+            instructionsText.text = "You Lose!" + "\n" + "Press R to Try again!";
         }
         
-        if (SceneManager.GetActiveScene().buildIndex == 0) {
+        if ((SceneManager.GetActiveScene().buildIndex == 0)) {
             instructionsText.text =
                 "Avoid all traffic and don't go over 2000 calories! move L or R\n One Day Lil' Gumpy started running..." +
                 " \n Press Space to continue and jump!";
