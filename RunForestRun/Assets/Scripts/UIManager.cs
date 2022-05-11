@@ -69,7 +69,7 @@ public class UIManager : MonoBehaviour
         if (cal >= 2000)
         {
             playerControllerScript.gameOver = true; 
-            won = true; 
+            //won = true; 
 
            
             instructionsText.text = "You died of diabetes!" + "\n" + "Press R to Try again!"; 

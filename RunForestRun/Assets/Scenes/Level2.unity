@@ -579,6 +579,102 @@ MonoBehaviour:
   instructionsText: {fileID: 752362892}
   calText: {fileID: 360243512}
   won: 0
+--- !u!1 &502325421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 502325422}
+  - component: {fileID: 502325425}
+  - component: {fileID: 502325424}
+  - component: {fileID: 502325423}
+  m_Layer: 5
+  m_Name: Timer
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &502325422
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502325421}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1452534147}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -288.40002, y: 123.199974}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &502325423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502325421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af77fb985051864b9841933f5651366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelManager: {fileID: 0}
+  timeLeft: 0
+  timeText: {fileID: 502325424}
+  totalTime: 0
+--- !u!114 &502325424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502325421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Time Left:'
+--- !u!222 &502325425
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502325421}
+  m_CullTransparentMesh: 0
 --- !u!1 &752362891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,6 +1131,7 @@ RectTransform:
   m_Children:
   - {fileID: 360243510}
   - {fileID: 752362894}
+  - {fileID: 502325422}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1437,7 +1534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5be4f70bb94ff4227875c1e4f19fca91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabsToSpawn:
+  vehiclePrefabs:
   - {fileID: 1959030373088092, guid: fc4245223e4122142bb14239d44230ef, type: 3}
   - {fileID: 1646981259178978, guid: 512151c1530b99343a884b12ee9c5e1e, type: 3}
   - {fileID: 1646981259178978, guid: 2dc42346e5313b34c93d598a61994629, type: 3}
@@ -1445,6 +1542,10 @@ MonoBehaviour:
   - {fileID: 1646981259178978, guid: f463242ba59e68243b7a693d4f0cfc18, type: 3}
   minRangeInSec: 0.2
   maxRangeInSec: 0.8
+  foodTimeModifier: 2
+  laneCount: 6
+  laneWidth: 0
+  playerBoundary: 6.5
   foodPrefabs:
   - {fileID: 4031643773961001379, guid: a3e1f9e365980b04aabc4f0362a1ba90, type: 3}
   - {fileID: 8800796910019168564, guid: c1d99ece070b20543a90b41b8a20734d, type: 3}
