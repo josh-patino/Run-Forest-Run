@@ -10,6 +10,8 @@ TagManager:
   - HealthyFood
   - UnhealthyFood
   - DisplayScoreText
+  - SceneManager
+  - Text
   layers:
   - Default
   - TransparentFX
