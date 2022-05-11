@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-public class NextSceneButton : MonoBehaviour
+using UnityEngine.UI;
+
+public class RestartGame : MonoBehaviour
 {
     private Button button;
 
@@ -17,15 +18,14 @@ public class NextSceneButton : MonoBehaviour
     {
         button = GetComponent<Button>();
 
-        button.onClick.AddListener(SetDifficulty);
+       button.onClick.AddListener(SetDifficulty);
 
     }
 
     void SetDifficulty()
     {
         Debug.Log(gameObject.name + " was clicked");
-        //go to the next scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //restart game
+        SceneManager.LoadScene(0);
     }
-
 }

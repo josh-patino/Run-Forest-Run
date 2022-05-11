@@ -476,7 +476,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start Next Level
+  m_Text: Play Again?
 --- !u!222 &1045861568
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -816,9 +816,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1689009072}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bafa8298cf7e9254eac607065b726e22, type: 3}
+  m_Script: {fileID: 11500000, guid: ce9e4a862ff148f46be3b6ee52207659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  difficulty: 0
 --- !u!1 &2002509708
 GameObject:
   m_ObjectHideFlags: 0

@@ -36,7 +36,7 @@ public class LevelManager : MonoBehaviour
         //start time of level
         time = Time.time;
         //changes how long each stage lasts adding time each new stage
-        timeLeft = (SceneManager.GetActiveScene().buildIndex + 1) * 20f;
+        timeLeft = (SceneManager.GetActiveScene().buildIndex + 1) * 15f;
         
     }
 
