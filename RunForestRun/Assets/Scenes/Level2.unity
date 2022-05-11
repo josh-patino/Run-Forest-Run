@@ -326,6 +326,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6656a56b4f754987b1afa243bc1e90c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jump: {fileID: 0}
+  crashing: {fileID: 0}
+  eating: {fileID: 0}
   jumpForce: 0
   isOnGround: 1
   forceMode: 0
@@ -593,7 +596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &752362892
 MonoBehaviour:
   m_ObjectHideFlags: 0
