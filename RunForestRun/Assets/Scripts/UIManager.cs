@@ -3,86 +3,65 @@
 * Project 4
 * manages the UI, displays the instructions, story, and the score
 */
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; 
-using UnityEngine.SceneManagement; 
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class UIManager : MonoBehaviour
-{
-    public int cal = 0;
+public class UIManager : MonoBehaviour {
+    public double cal = 500;
+
     //public Text calories; 
-    public Text instructionsText; 
-    public Text calText; 
-    private PlayerController playerControllerScript; 
-    public bool won = false; 
-   
-   
+    public Text instructionsText;
+    public Text calText;
+    private PlayerController playerControllerScript;
 
-    void Awake()
-    {
-        calText.gameObject.SetActive(false);
-
-        calText.gameObject.SetActive(true);
-    }
-    void Start()
-    {
-        if (calText == null)
-        {
+    void Start() {
+        if (calText == null) {
             calText = FindObjectOfType<Text>();
         }
 
-        if (playerControllerScript == null)
-        {
-            playerControllerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>(); 
+        if (playerControllerScript == null) {
+            playerControllerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         }
 
         calText.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (SceneManager.GetActiveScene().buildIndex == 0 )
-        {
-            instructionsText.text = "Avoid all traffic and don't go over 2000 calories! move L or R\n One Day Lil' Gumpy started running... \n Press Space to continue and jump!"; 
+    void Update() {
+        cal -= 10 * Time.deltaTime;
+        
+        if (cal < 0) {
+            playerControllerScript.gameOver = true;
+            instructionsText.text = "You died of Starvation!" + "\n" + "Press R to Try again!";
+        } else if ( cal >= 2000) {
+            playerControllerScript.gameOver = true;
+            instructionsText.text = "You died of diabetes!" + "\n" + "Press R to Try again!";
         }
         
+        if (SceneManager.GetActiveScene().buildIndex == 0) {
+            instructionsText.text =
+                "Avoid all traffic and don't go over 2000 calories! move L or R\n One Day Lil' Gumpy started running..." +
+                " \n Press Space to continue and jump!";
+        }
 
-        if (Input.GetKey(KeyCode.Space))
-        {
-            instructionsText.gameObject.SetActive(false); 
+        if (Input.GetKey(KeyCode.Space)) {
+            instructionsText.gameObject.SetActive(false);
         }
 
         //display calories during the game
-        if (!playerControllerScript.gameOver)
-        {
-            calText.text = "Calories: " + cal;
-        }
-        if (playerControllerScript.gameOver && !won)
-        {
+        if (!playerControllerScript.gameOver) {
+            calText.text = "Calories: " + Math.Round(cal);
+        } else {
             instructionsText.gameObject.SetActive(true);
-            instructionsText.text = "You Lose!" + "\n" + "Press R to Try again!";   
+            instructionsText.text = "You Lose!" + "\n" + "Press R to Try again!";
+            if (Input.GetKeyDown(KeyCode.R)) {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
         }
-        // win condition: 10
-        if (cal >= 2000)
-        {
-            playerControllerScript.gameOver = true; 
-            won = true; 
-
-           
-            instructionsText.text = "You died of diabetes!" + "\n" + "Press R to Try again!"; 
-        }
-
-        if (playerControllerScript.gameOver && Input.GetKeyDown(KeyCode.R))
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
-
-            
-        }
-
-      
-
     }
 }

@@ -475,10 +475,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d3a53d41ea4041fd9b88886284c4e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cal: 1
+  cal: 500
   instructionsText: {fileID: 1059493035}
   calText: {fileID: 769575339}
-  won: 0
 --- !u!4 &516625020
 Transform:
   m_ObjectHideFlags: 0
@@ -634,7 +633,6 @@ MonoBehaviour:
   cal: 0
   instructionsText: {fileID: 1059493035}
   calText: {fileID: 769575339}
-  won: 0
 --- !u!114 &769575341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -650,7 +648,6 @@ MonoBehaviour:
   cal: 0
   instructionsText: {fileID: 1059493035}
   calText: {fileID: 769575339}
-  won: 0
 --- !u!1 &776990021
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,7 +1349,6 @@ MonoBehaviour:
   cal: 0
   instructionsText: {fileID: 1059493035}
   calText: {fileID: 769575339}
-  won: 0
 --- !u!1 &2085962262
 GameObject:
   m_ObjectHideFlags: 0

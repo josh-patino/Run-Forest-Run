@@ -638,7 +638,6 @@ MonoBehaviour:
   cal: 0
   instructionsText: {fileID: 752362892}
   calText: {fileID: 360243512}
-  won: 0
 --- !u!1 &752362891
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,10 +839,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d3a53d41ea4041fd9b88886284c4e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cal: 1
+  cal: 500
   instructionsText: {fileID: 752362892}
   calText: {fileID: 360243512}
-  won: 0
 --- !u!4 &1139986261
 Transform:
   m_ObjectHideFlags: 0

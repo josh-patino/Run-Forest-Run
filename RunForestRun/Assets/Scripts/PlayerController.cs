@@ -1,5 +1,5 @@
 /*
-* GRoup 1
+* group 1
 * Project 4
 * manages the player script
 */
