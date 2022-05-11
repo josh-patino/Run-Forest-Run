@@ -58,7 +58,6 @@ public class UIManager : MonoBehaviour {
             calText.text = "Calories: " + Math.Round(cal);
         } else {
             instructionsText.gameObject.SetActive(true);
-            instructionsText.text = "You Lose!" + "\n" + "Press R to Try again!";
             if (Input.GetKeyDown(KeyCode.R)) {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }

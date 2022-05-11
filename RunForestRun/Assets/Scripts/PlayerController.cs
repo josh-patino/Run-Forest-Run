@@ -83,17 +83,13 @@ public class PlayerController : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("HealthyFood")) {
-            displayScoreScript.cal -= 130;
-            if (displayScoreScript.cal < 0) {
-                displayScoreScript.cal = 0;
-            }
-
+            displayScoreScript.cal += 150;
             Destroy(other.gameObject);
             playerAudio.PlayOneShot(eating, 1.0f);
         }
 
         if (other.CompareTag("UnhealthyFood")) {
-            displayScoreScript.cal += 200;
+            displayScoreScript.cal += 500;
             Destroy(other.gameObject);
             playerAudio.PlayOneShot(eating, 2.0f);
         }
